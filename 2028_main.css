@@ -1,0 +1,915 @@
+/* reset css */
+@import url('https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css');
+
+
+
+
+/* 첫 시작 화면 */
+body{
+    /* background-image: url(https://img.youtube.com/vi/jOt2iU4ZdeE/maxresdefault.jpg?width=&format=webply&dpr=2&disable=upscale&quality=80);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background: rgb(57, 57, 57); */
+    background-image: url(./img/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.vic{
+    width: 100%;
+    height: 150px;
+    opacity: 0.5;
+    position: absolute;
+    top :37%;
+    left : 0;
+    background: black;
+    font-size: 70px;
+    text-align: center;
+    line-height: 150px;
+    color: white;
+    font-family: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+.fail{
+    width: 100%;
+    height: 150px;
+    opacity: 0.5;
+    position: absolute;
+    top :37%;
+    left : 0;
+    background: black;
+    font-size: 70px;
+    text-align: center;
+    line-height: 150px;
+    color: white;
+    font-family: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+
+.wrapper2 {
+  height: 300px;
+  width: 100%;
+  /*This part is important for centering*/
+  display: grid;
+  margin: 0 auto;
+  color: white;
+  font-size: 60px;
+  place-items: center;
+  margin-top: 40px;
+}
+
+.typing-demo {
+  width: 430px;
+  animation: typing 2s steps(22), blink .5s  infinite ;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  text-shadow:1px 1px 1px #000;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow:1px 1px 1px #000;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.wrapper .startPage {
+    background: white;
+    width: 703px;
+    height: 800px;
+    box-sizing: border-box;
+    margin: 60px auto;
+    text-align: center;
+    border: 1px solid black;
+    background-image: url(./img/titlell.jpeg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    /* animation: up 1s; */
+
+    /* display: none; */
+    /* display-none 했음*********************** */
+
+}
+
+.wrapper .startPage .title {
+    line-height: 3;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 6px 2px 2px gray;
+    animation: up 1s;
+}
+
+.wrapper .startPage .title span {
+    border: 1px solid green;
+    padding: 15px 15px;
+    
+}
+
+.wrapper .startPage #startBtn {
+    background: green;
+    padding: 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 1px solid green;
+    box-shadow: 6px 4px 6px rgb(8, 78, 8);
+    animation: up 1s;
+    margin-top: 250px;
+    width: 200px;
+}
+
+.wrapper .startPage #startBtn:hover {
+    background: rgb(8, 78, 8);
+    cursor: pointer;
+}
+
+.wrapper .startPage .intro {
+    background: yellow;
+    padding: 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 1px solid yellow;
+    box-shadow: 6px 4px 6px rgb(194, 194, 57);
+    animation: up 1s;
+    margin-top: 100px;
+    margin-left: 20px;
+    width: 200px;
+    text-shadow:1px 1px 1px #000;
+    
+}
+
+.wrapper .startPage .intro:hover {
+    background: rgb(223, 223, 91);
+    cursor: pointer;
+}
+
+@keyframes updown {
+    0% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 10px;
+    }
+
+}
+
+/* 이름 통통 테스트 */
+
+/* 통통 애니 */
+/*
+@keyframes upup {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5%);
+    } 
+    
+    100% {
+        transform: translateY(-10px);
+    }
+    }
+
+    @keyframes downdown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(5%);
+    } 
+    
+    100% {
+        transform: translateY(10px);
+    }
+    }
+/*  */
+/*
+.wrapper .startPage .up1 {
+    color: red;
+    animation: upup 1s infinite;
+    animation-direction: alternate;
+}
+
+.wrapper .startPage .down1 {
+    color: blue;
+    animation: downdown infinite;
+    animation-direction: alternate;
+}
+
+
+/*  */
+
+/* 첫 시작화면 end */
+
+/* 게임 설명창 */
+.wrapper .startPage .introText {
+    background: white;
+    width: 400px;
+    height: 400px;
+    color: black;
+    position: absolute;
+    top: 70px;
+    left: 150px;
+    opacity: 0.9;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 250%;
+    display: none;
+    padding: 5px;
+    border-radius: 26px;
+    font-weight: bold;
+    animation: fadein 1s;
+    padding-left: 30px;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.9;
+    }
+}
+
+
+.wrapper .startPage .introText .yellow {
+    color: black;
+    background: yellow;
+    font-weight: bold;
+}
+
+.wrapper .startPage .introText .green1 {
+    color: black;
+    background: green;
+    font-weight: bold;
+}
+
+.wrapper .startPage .introText .gray {
+    color: black;
+    background: gray;
+    font-weight: bold;
+}
+
+
+/* -------------------------------------- */
+/* 두번쨰 화면, 선택 모드 */
+.wrapper .select {
+    background: white;
+    width: 703px;
+    height: 800px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    /* animation: up 1s; */
+    border: 1px solid black;
+    background-image: url(./img/1.JPG);
+    background-size: cover;
+    margin: 60px auto;
+    position: relative;
+    overflow: hidden;
+ 
+}
+
+.wrapper .select .title2 span {
+    border: 1px solid green;
+    padding: 15px 15px;
+    background: green;
+      
+}
+
+.wrapper .startPage #ka {
+    background-image: url(./img/top\ door.jpg); 
+    background-repeat: no-repeat;    
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 10;
+    /* background: red; */
+    
+}
+.wrapper .startPage #kb {
+    background-image: url(./img/bottom\ door.jpg);
+    background-repeat: no-repeat;    
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 9;
+    /* background: blue; */
+}
+.wrapper .select #kc {
+    background-image: url(./img/top\ door.jpg); 
+    background-repeat: no-repeat;  
+    
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 10;
+    /* background: red; */
+    
+}
+.wrapper .select #kd {
+    background-image: url(./img/bottom\ door.jpg);
+    background-repeat: no-repeat; 
+    
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 9;
+    /* background: blue; */
+}
+
+
+.wrapper .select #k1 {
+
+    background-image: url(./img/top\ door.jpg);  
+    background-repeat: no-repeat;   
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 10;
+    /* background: red; */
+    
+}
+.wrapper .select #k2 {
+    background-image: url(./img/bottom\ door.jpg);
+    background-repeat: no-repeat; 
+    display: none;
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 9;
+    /* background: blue; */
+}
+
+.wrapper .final #k3 { 
+    background-image: url(./img/top\ door.jpg); 
+    background-repeat: no-repeat;  
+
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 10;
+    /* background: red; */
+}
+.wrapper .final #k4 {
+    background-image: url(./img/bottom\ door.jpg);
+    background-repeat: no-repeat; 
+    
+    width: 703px;
+    height: 500px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    border-radius: 1px solid black;
+    box-sizing: border-box;;
+    z-index: 9;
+    /* background: blue; */
+    
+} 
+
+.wrapper .select .title2 {
+    line-height: 2;
+    color: white;
+    margin-top: 50px;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 6px 2px 2px gray;
+    /* animation: up 1s; */
+
+}
+
+@keyframes up {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    /* 50% {
+        opacity: 0.5;
+        transform: translateY(-20%);
+    } */
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper .select button {
+    background: green;
+    margin: 350px 20px;
+    font-size: 25px;
+    padding: 10px 15px;
+    /* border-radius: 50px; */
+    border: 1px solid green;
+    box-shadow: 6px 4px 6px rgb(8, 78, 8);
+    animation: up 1s;
+    width: 180px;
+
+
+}
+
+.wrapper .select button:hover {
+    background: rgb(8, 78, 8);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.wrapper .select .sLang {
+    background: gray;
+    margin: 0 20px;
+    font-size: 25px;
+    padding: 10px 15px;
+    /* border-radius: 50px; */
+    border: 1px solid gray;
+    box-shadow: 6px 4px 6px rgb(95, 92, 92);
+    animation: up 2s;
+}
+
+.wrapper .select .sNum {
+    background: yellow;
+    margin: 0 20px;
+    font-size: 25px;
+    padding: 10px 15px;
+    /* border-radius: 50px; */
+    border: 1px solid yellow;
+    box-shadow: 4px 4px 4px rgb(225, 225, 50);
+    animation: up 2s;
+}
+
+
+/* 게임 설명 end */
+
+
+
+
+
+
+
+
+
+
+/* 메인 게임화면 css */
+
+.final {
+    width: 703px;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin: 60px auto;
+    display: none;
+    overflow: hidden;
+    background-image: url(./img/background.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    
+
+    position: relative;
+}
+
+.wrap {
+    background-image: url(img/wrap.jpg);
+    width: 500px;
+    height: 600px;
+    border-radius: 15px;
+    overflow: auto;
+}
+
+input {
+    box-sizing: border-box;    
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 70px;
+    background-color:transparent;
+    border-radius: 5px;
+    border: 0px;
+}
+
+input:focus {outline:none;}
+
+button {
+    width: 500px;
+    box-sizing: border-box;
+}
+
+.wrap::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* 사이드 메뉴 css */
+.sidebar {
+    box-sizing: border-box;
+    background-image: url(./img/sidebar.jpg);
+    background-repeat: no-repeat;
+    width: 199px;
+    height: 602px;
+    
+    border-radius: 5px;
+
+    padding: 40px 0;
+
+}
+
+.correct {
+    box-sizing: border-box;
+    width: 199px;
+    height: 210px;
+    /* border: 1px solid red; */
+}
+
+.incorrect {
+    box-sizing: border-box;
+    width: 199px;
+    height: 210px;
+    /* border: 1px solid red; */
+}
+
+.hint {
+    box-sizing: border-box;
+    width: 199px;
+    height: 100px;
+    
+
+}
+
+.greenbox{
+
+    animation: jittery 4s ;
+
+}
+@keyframes jittery {
+    5%,
+    50% {
+      transform: scale(1);
+    }
+  
+    10% {
+      transform: scale(0.9);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    20% {
+      transform: scale(1.15) rotate(-5deg);
+    }
+  
+    25% {
+      transform: scale(1.15) rotate(5deg);
+    }
+  
+    30% {
+      transform: scale(1.15) rotate(-3deg);
+    }
+  
+    35% {
+      transform: scale(1.15) rotate(2deg);
+    }
+  
+    40% {
+      transform: scale(1.15) rotate(0);
+    }
+  }
+  
+
+
+/* 상태창 css */
+.status {
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-top : 45px;
+    background-image: url(./img/option.jpg);
+
+    
+}
+
+/* keycoard css */
+
+.keyboard {
+    background-image: url(./img/keyboard.jpg);
+    box-sizing: border-box;
+    width: 503px;
+    height: 198px;
+   
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.keyboardBox {
+    box-sizing: border-box;
+    background-image: url(./img/normalbox.png);
+    width: 46px;
+    height: 50px;
+    font-size: 25px;
+    
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+    
+}
+
+.keyboardK {
+    background-image: url(./img/keyboard.jpg);
+    box-sizing: border-box;
+    width: 503px;
+    height: 198px;
+   
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.keyboardBoxK {
+    box-sizing: border-box;
+    background-image: url(./img/normalbox.png);
+    width: 46px;
+    height: 50px;
+    font-size: 25px;
+    
+    text-align: center;
+    line-height: 45px;
+    border-radius: 10px;
+    
+}
+
+.green {
+    background-image: url(./img/greenbox.png); 
+    border-radius: 10px;
+    
+    
+    animation: vibration .3s infinite;
+  
+
+}
+
+@keyframes vibration {
+    from {
+        transform: rotate(5deg);
+    }
+
+    to {
+        transform: rotate(-8deg);
+    }
+}
+
+
+
+.yellow {
+    background-image: url(./img/yellowbox.png); 
+    animation: vibration .3s infinite;
+
+}
+
+
+
+.lightgrey {
+    background-image: url(./img/graybox.png); 
+    animation: vibration .3s infinite;
+
+}
+.hell{
+    background-image: url(./img/check.png);
+    background-color:transparent;
+    border: 0px;
+    height: 22px;
+    color: white;
+}
+
+.v-title
+ {
+    background-image: url(./img/victory.png);
+    background-repeat: no-repeat;
+       
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+    width: 190px;
+    height: 65px;
+    font-size: 15px;
+    text-align: center;
+  
+    color: white;
+    margin-left: 33px;
+
+    /* border-bottom: 1px solid black; */
+
+}
+.d-title{
+    
+        background-image: url(./img/defeat.png);
+        background-repeat: no-repeat;           
+        box-sizing: border-box;
+        /* border: 1px solid blue; */
+        width: 190px;
+        height: 65px;
+        font-size: 15px;
+        text-align: center;
+       
+        color: white;
+        margin-left: 33px;
+    
+        /* border-bottom: 1px solid black; */
+    
+    
+}
+
+.wordpad {
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 160px;
+    overflow: scroll;
+}
+
+/* hint css */
+
+.h-title, .h-con {
+    box-sizing: border-box;
+    background-image: url(./img/hint.jpg);
+    /* border: 1px solid blue; */
+    width: 130px;
+    height: 80px;
+     font-size: 20px;
+    line-height: 80px;
+    text-align: center;  
+    color: white;
+    font-family: bold;
+
+   
+    margin: 10px auto;
+
+}
+
+.h-title:hover{
+    cursor: pointer;
+}
+
+.h-con:hover{
+    cursor: pointer;
+}
+
+
+
+
+.hide {
+    display: none;
+}
+
+.hint-text {
+    color: white;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.h-wordpad {
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 75px;
+    overflow: scroll;
+}
+
+.h-wordpad::-webkit-scrollbar {
+    display: none;
+}
+
+.wordpad::-webkit-scrollbar {
+    display: none;
+}
+
+/* 사이드 성공 실패 */
+.sword {
+    width: 100%;
+    font-size: 25px;
+    /* border: 1px solid red; */
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.dword {
+
+    width: 100%;
+    font-size: 25px;
+   
+    /* border: 1px solid red; */
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+   
+}
+
+/*  */
+
+/* 상태창 css */
+
+.tool {    
+    
+    width: 130px;
+    height: 36px;
+    margin: 0px auto 0;    
+    font-size: 15px;
+    margin-right: 40px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    line-height: 36px;
+}
+
+.tool:hover {
+    border: 3px solid white;
+    font-weight: bold;
+
+}
+
+.tool:last-child:hover {
+    cursor: pointer;
+
+}
+
+.btn-lang {
+    width: 20px;
+    height: 20px; 
+    
+    
+}
+
+button{
+    background-color:transparent;
+    color: white;
+    margin: 0px;
+    border: none;
+}
+
+.btn-lang:hover{
+    cursor: pointer;
+
+}

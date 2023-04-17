@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wordle</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="./2028_main.css">
+
+</head>
+
+<body>
+
+    <script src="./2028_app.js" defer></script>
+
+
+    <div class="wrapper">
+        <!-- 인트로 첫 번째 화면 -->
+        <div class="startPage">
+            <div id="ka" class="animate__animated animate__bounceInDown animate__slow"></div>
+            <div id="kb" class="animate__animated animate__bounceInUp animate__slow"></div>
+
+
+            <div class="wrapper2">
+                <div class="typing-demo">
+                  WORDLE
+                </div>
+            </div>
+            <button id="startBtn">Game Start!</button>
+            <button class="intro" onmouseenter="intros()" onmouseleave="intros2()">게임 설명!</button>
+            <div class="introText">무작위 n자리의 영어 단어를 맞춥니다.<br>
+                n개 철자의 단어를 입력을 했을 때 <br>
+                블록이 <span class="yellow">노란색</span>으로 뜨면 : <br>
+                단어에 포함이 됐지만
+                위치는 틀리다! <br>
+                블록이 <span class="green1">초록색</span>으로 뜨면 : <br>
+                철자와 위치가 맞다! <br>
+                블록이 <span class="gray">회색</span>으로 뜬다면 : <br>
+                철자와 위치가 둘다 맞지 않습니다..</div>
+        </div>
+
+        <!-- 인트로 두 번째 화면 -->
+        <div class="select">
+            <div id="kc" class="animate__animated animate__bounceInDown animate__slower"></div>
+            <div id="kd" class="animate__animated animate__bounceInUp animate__slower"></div>
+            <div id="k1" class="animate__animated animate__bounceOutUp animate__slow"></div>
+            <div id="k2" class="animate__animated animate__bounceOutDown animate__slow"></div>
+            <div class="title2"><span>W</span> <span>o</span> <span>r</span> <span>d</span> <span>l</span>
+                <span>e</span></div>
+            <select name="sNumber" class="sNum" id="sNum">
+
+                <optgroup label="선택">
+                    <option selected>글자수 선택</option>
+                    <option value="3" class="wordNum3">3 </option>
+                    <option value="4" class="wordNum4">4 </option>
+                    <option value="5" class="wordNum5">5 </option>
+                    <option value="6" class="wordNum6">6 </option>
+                </optgroup>
+            </select>
+            <button id="sbtn2">시 작!</button>
+            <select name="선택" class="sLang">
+                <optgroup label="lang">
+                    <option value="1" selected>Eng</option>
+                    <option value="2">Kor</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="final">
+            <!-- 게임 메인 화면 -->
+            <div id="k3" class="animate__animated animate__bounceOutUp animate__slower"></div>
+            <div id="k4" class="animate__animated animate__bounceOutDown animate__slower"></div>
+            <div class="wrap animate__animated animate__bounceInDown animate__slower animate__delay-1s">
+                <div class="temp">
+                </div>
+            </div>
+            <!-- 사이드 메뉴 -->
+            <div class="sidebar animate__animated animate__bounceInRight animate__slower animate__delay-1s">
+                <div class="correct">
+                    <div class="v-title">                     
+                    </div>
+                    <div class="wordpad" id="vpad"></div>
+                </div>
+                <div class="incorrect">
+                    <div class="d-title"></div>
+                    <div class="wordpad" id="dpad"></div>
+                </div>
+                <div class="hint">
+                    <div class="h-title">HINT</div>
+                    <div class="h-con hide"></div>               
+
+                </div>
+            </div>
+            <!-- 키보드 창 -->
+            <div class="keyboard animate__animated animate__bounceInUp animate__slower animate__delay-1s hide">
+                <div class="keyboardBox" value="a">a</div>
+                <div class="keyboardBox" value="b">b</div>
+                <div class="keyboardBox" value="c">c</div>
+                <div class="keyboardBox" value="d">d</div>
+                <div class="keyboardBox" value="e">e</div>
+                <div class="keyboardBox" value="f">f</div>
+                <div class="keyboardBox" value="g">g</div>
+                <div class="keyboardBox" value="h">h</div>
+                <div class="keyboardBox" value="i">i</div>
+                <div class="keyboardBox" value="j">j</div>
+                <div class="keyboardBox" value="k">k</div>
+                <div class="keyboardBox" value="l">l</div>
+                <div class="keyboardBox" value="m">m</div>
+                <div class="keyboardBox" value="n">n</div>
+                <div class="keyboardBox" value="o">o</div>
+                <div class="keyboardBox" value="p">p</div>
+                <div class="keyboardBox" value="q">q</div>
+                <div class="keyboardBox" value="r">r</div>
+                <div class="keyboardBox" value="s">s</div>
+                <div class="keyboardBox" value="t">t</div>
+                <div class="keyboardBox" value="u">u</div>
+                <div class="keyboardBox" value="v">v</div>
+                <div class="keyboardBox" value="w">w</div>
+                <div class="keyboardBox" value="x">x</div>
+                <div class="keyboardBox" value="y">y</div>
+                <div class="keyboardBox" value="z">z</div>
+            </div>
+            <div class="keyboardK animate__animated animate__bounceInUp animate__slower animate__delay-1s hide">
+                <div class="keyboardBoxK" value="ㅂ">ㅂ</div>
+                <div class="keyboardBoxK" value="ㅈ">ㅈ</div>
+                <div class="keyboardBoxK" value="ㄷ">ㄷ</div>
+                <div class="keyboardBoxK" value="ㄱ">ㄱ</div>
+                <div class="keyboardBoxK" value="ㅅ">ㅅ</div>
+        
+                <div class="keyboardBoxK" value="ㅛ">ㅛ</div>
+                <div class="keyboardBoxK" value="ㅕ">ㅕ</div>
+                <div class="keyboardBoxK" value="ㅑ">ㅑ</div>
+                <div class="keyboardBoxK" value="ㅐ">ㅐ</div>
+                <div class="keyboardBoxK" value="ㅔ">ㅔ</div>
+        
+                <div class="keyboardBoxK" value="ㅁ">ㅁ</div>
+                <div class="keyboardBoxK" value="ㄴ">ㄴ</div>
+                <div class="keyboardBoxK" value="ㅇ">ㅇ</div>
+                <div class="keyboardBoxK" value="ㄹ">ㄹ</div>
+                <div class="keyboardBoxK" value="ㅎ">ㅎ</div>
+        
+                <div class="keyboardBoxK" value="ㅗ">ㅗ</div>
+                <div class="keyboardBoxK" value="ㅓ">ㅓ</div>
+                <div class="keyboardBoxK" value="ㅏ">ㅏ</div>
+                <div class="keyboardBoxK" value="ㅣ">ㅣ</div>
+                <div class="keyboardBoxK" value="ㅋ">ㅋ</div>
+        
+                <div class="keyboardBoxK" value="ㅌ">ㅌ</div>
+                <div class="keyboardBoxK" value="ㅊ">ㅊ</div>
+                <div class="keyboardBoxK" value="ㅍ">ㅍ</div>
+                <div class="keyboardBoxK" value="ㅠ">ㅠ</div>
+                <div class="keyboardBoxK" value="ㅜ">ㅜ</div>
+        
+                <div class="keyboardBoxK" value="ㅡ">ㅡ</div>
+            </div>
+            <div class="status animate__animated animate__bounceInRight animate__slower animate__delay-1s">
+                <!-- 상태창  -->
+                <div class="tool">남은 기회 : <em></em></div>
+                <div class="tool">
+                    <!-- <button class="btn-lang left"> ◀ </button> -->
+                    <span class="eng hide">언어 : English</span> <span class="kor hide">언어 : korean</span>
+                    <!-- <button class="btn-lang right"> ▶</button> -->
+                </div> 
+                <div class="tool">처음화면으로</div>
+
+            </div>
+
+            <div class="vic hide">성공</div>
+            <div class="fail hide">실패</div>
+
+
+        </div>
+
+
+    </div>
+    
+  
+    
+
+
+</body>
+
+</html>
